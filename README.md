@@ -89,5 +89,7 @@ spec:
 step 8: add all file in github
 step 9 : kubernet CLI in jenkins 
 Step 10: copy the file name **.Kube** in user to ProgramData//Jenkins -> **.Kube**
-
+step 11: add crendential which is upoaded
+final step : pipline script
+************************
 
