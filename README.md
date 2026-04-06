@@ -50,7 +50,7 @@ WORKDIR /app
 COPY target/simple-java-app-1.0.jar app.jar
 CMD ["java", "-jar", "app.jar"]
 *******************
-step 8 : add deployment
+step 8 : add deployment.yaml
 ***********************
 apiVersion: apps/v1
 kind: Deployment
