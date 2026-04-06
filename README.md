@@ -51,5 +51,43 @@ COPY target/simple-java-app-1.0.jar app.jar
 CMD ["java", "-jar", "app.jar"]
 *******************
 step 8 : add deployment
+***********************
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: java-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: java-app
+  template:
+    metadata:
+      labels:
+        app: java-app
+    spec:
+      containers:
+      - name: java-app
+        image: prakashraj007/java-app:latest
+        ports:
+        - containerPort: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: java-service
+spec:
+  type: NodePort
+  selector:
+    app: java-app
+  ports:
+    - port: 80
+      targetPort: 8080
+      nodePort: 30007
+      ******************
+step 8: add all file in github
+step 9 : kubernet CLI in jenkins 
+Step 10: copy the file name **.Kube** in user to ProgramData//Jenkins -> **.Kube**
 
 
