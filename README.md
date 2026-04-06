@@ -92,5 +92,6 @@ Step 10: copy the file name **.Kube** in user to ProgramData//Jenkins -> **.Kube
 step 11: add crendential which is upoaded
 final step : pipline script
 ************************
+next step: command on "kubectl get svc"
 
 
