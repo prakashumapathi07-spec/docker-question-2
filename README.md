@@ -4,7 +4,8 @@ enable docker desktop in Kubernetes
 step 2:  install docker and docker pipline in jenkins
 step 3:  create a floder in user in "simple-app-java"
 step 4:  create a App.java and pom.xml in that
-step 5:  
+step 5:  App.java
+*******************
 public class App {
  public static void main(String[] args) throws Exception {
  System.out.println("Java CI/CD Application Started...");
@@ -42,9 +43,10 @@ pom.xml
 ***********************
 
 
-step 6:  command on 2 files "mvn clean package"
+step 6:  command on 2 files:::simple-java-app>> "mvn clean package"
 
 step 7: ADD Dockerfile and Deployment
+********************
 FROM eclipse-temurin:17-jdk
 WORKDIR /app
 COPY target/simple-java-app-1.0.jar app.jar
